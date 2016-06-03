@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*________________________________ End Reset Meyer ________________________________*/
+body{
+	font-family: 'Libre Baskerville', serif;
+	font-size: 12px;
+	line-height: 2em;
+	color: #4F5559;
+	max-width: 1135px;
+	overflow-x: hidden; /*permet de ne pas avoir de problème avec le scroll horizontal lors de l'agrandissement de la bannière*/
+}
+
+header{
+	background: url(../img/MountainFullscreen.jpg) no-repeat center center ;
+	background-color: rgba(0,0,0,0.5);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 500px;
+	width: 100%;
+	transition:all 1s ease-in;
+}
+
+header:hover{
+	-moz-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
+	transition:all 4s ease-out;
+}
+
+header:before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+	opacity: .6; 
+	height: 500px;
+}
+
+h1{
+	padding-top: 3em;
+	/*font-size: 3em !important;*/
+}
+
+h1,h1+h2{
+	text-align: center;
+	/*padding-top: 2em;*/ /*permet de centrer verticalement*/
+	color: white;
+	position: relative;
+	vertical-align: center;
+	line-height: 1.25em;
+}
+
+h1+h2{
+	padding-top: 0.5em;
+	max-width: 150px;
+	margin: 0 auto;
+} /*suite du centrage vertical*/
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Roboto', sans-serif;
+	font-size: 2em;
+	line-height: 2em;
+}
+
+h1{
+	font-size: 5em;
+	line-height: 1em;
+}
+
+.summary{
+	position: relative;
+	text-align: center;
+	color: white;
+	background-color: #646471;
+	padding: 3em;
+}
+
+.preamble{
+	padding: 3em;
+	border-bottom: 30px solid #292A33;
+}
+
+.main.supporting{
+	background-color: #292A33;
+}
+
+.main div{
+	margin: 0 auto;
+	max-width: 60%;
+	display: block;
+	border-collapse: separate;
+	padding: 1.5em;
+	border-top: 0.2em solid transparent;
+}
+
+.main div+div{
+	margin-top: 5em;
+}
+
+.main div:last-of-type{
+	margin-bottom: 3em;
+}
+
+.main div:hover{
+	border-top: 0.2em solid transparent;
+	-webkit-transition:border-color 1s ease; 
+	-moz-transition:border-color 1s ease; 
+	-o-transition:border-color 1s ease;
+	transition: border-color 1s ease-out;
+															/*border gradient*/
+    -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.main h3:after{
+	background-position: -500px -35px;
+}
+
+.main div h3{
+	color: white;
+	line-height: 1.2em;
+	margin-bottom: 1em;
+}
+
+.main div a{
+	color: #646B70;
+}
+
+.main div a:hover{
+	color: white;
+}
+
+footer{
+	background-color: #423143;
+	text-align: center;
+}
+
+footer a:first-of-type{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/sprite2.png); /*sprites css*/
+	background-repeat: no-repeat;
+	font-size: 0; 
+}
+
+footer a:nth-of-type(2){
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/sprite2.png); /*sprites css*/
+	background-repeat: no-repeat;
+	font-size: 0; 
+	background-position: -200px;
+}
+
+footer a:nth-of-type(3){
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/sprite2.png); /*sprites css*/
+	background-repeat: no-repeat;
+	font-size: 0; 
+	background-position: -300px;
+}
+
+footer a:nth-of-type(4){
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/sprite2.png); /*sprites css*/
+	background-repeat: no-repeat;
+	font-size: 0; 
+	right: 100px;
+	background-position: -100px;
+}
+
+footer a:nth-of-type(5){
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/sprite2.png); /*sprites css*/
+	background-repeat: no-repeat;
+	font-size: 0; 
+	background-position: -400px;
+}
+
+footer a:hover{
+	-moz-transform:rotate(-10deg);
+	-webkit-transform:rotate(-10deg);
+	transform:rotate(-10deg);
+	transition:all .3s ease-out;
+}
+
+footer a{
+	transition:all .3s ease-in;
+}
+
+aside.sidebar{
+	color: black;
+	/*display: table;*/
+	border-collapse: separate;
+	border-spacing: 50px;
+	width: 100%;
+	margin: 0 auto;
+	background-image: linear-gradient(to bottom right, #292A33 20%, rgba(0,0,0,0.8) 100%);
+}
+
+aside.sidebar h3{
+	color: white;
+}
+
+aside.sidebar h3:after{
+	content: none;
+}
+
+.wrapper div{
+	display: block;
+}
+
+div.wrapper a{
+	color: #646b70;
+}
+
+div.wrapper a:hover{
+	color: white;
+}
+
+div.wrapper:hover{
+}
+
+/*personnalisation du scroll firefox pas compatible*/
+
+::-webkit-scrollbar {
+width: 15px;
+}
+
+
+::-webkit-scrollbar-track-piece  {
+background-color: #C2D2E4;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+height: 30px;
+background-color: #52738A;
+}
